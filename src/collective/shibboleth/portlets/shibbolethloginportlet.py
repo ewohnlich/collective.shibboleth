@@ -353,6 +353,7 @@ class AddForm(base.AddForm):
     constructs the assignment that is being added.
     """
     form_fields = form_fields
+    schema = IShibbolethLoginPortlet
 
     def create(self, data):
         return Assignment(**data)
@@ -368,3 +369,4 @@ class EditForm(base.EditForm):
     zope.formlib which fields to display.
     """
     form_fields = form_fields
+    schema = IShibbolethLoginPortlet
